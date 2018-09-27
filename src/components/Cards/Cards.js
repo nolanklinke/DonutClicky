@@ -9,7 +9,7 @@ const Cards = props => (
     </div>
     <div className="content"></div>
  
-  </div>
+   </div>
        
 );
 

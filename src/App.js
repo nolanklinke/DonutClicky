@@ -1,6 +1,6 @@
 import React from "react";
 
-import allcards from "./allcards";
+import allcards from "./allcards.json";
 import Cards from "./components/Cards"
 import Header from "./components/Header";
 import Layout from "./components/Layout";
@@ -62,7 +62,7 @@ class App extends React.Component {
 
     handleShuffle = () => {
     let shuffledCards = shuffleCards(allcards);
-    this.setState({ friends: shuffledCards});
+    this.setState({ allcards: shuffledCards});
     };
     
     render() {
@@ -79,7 +79,7 @@ class App extends React.Component {
                 <div className="container">
                     <div className="row">
                     {this.state.allcards.map(card => (
-                        <div className="col-md-3">
+                        <div className="col-md-2">
                         <Cards
                         handleClick={this.handleClick}
                         handleShuffle={this.handleShuffle} 
