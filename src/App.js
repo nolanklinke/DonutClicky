@@ -45,7 +45,7 @@ class App extends React.Component {
     this.setState({
         currentScore: 0,
         topScore: this.state.topScore,
-        message: "Nope!",
+        message: "Nope! You have clicked that one.",
         clickedCard: []
     });
     this.handleShuffle();
@@ -68,15 +68,12 @@ class App extends React.Component {
     render() {
         return (
             <Layout>
-                <Nav 
-                title="Donut Clicky Game"
-                />
                 <Header
                 message={this.state.message} 
                 score={this.state.currentScore}
                 topScore={this.state.topScore}
                 />
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row">
                     {this.state.allcards.map(card => (
                         <div className="col-md-2">
@@ -92,6 +89,9 @@ class App extends React.Component {
                     ))}
                     </div>
                 </div>
+                <Nav 
+                title="Donut Clicky Game"
+                />
             </Layout>
             
 
