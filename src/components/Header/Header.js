@@ -1,14 +1,13 @@
 import React from "react";
+import "./Header.css";
 
-class Header extends React.Component {
-    render() {
-        return (
-            <header>
-                <p>Current Score</p>
-                <h1>Top Score</h1>
-            </header>
-        );
-    }
-};
-
+const Header = props =>  (
+    <div className="header">
+        <h1>Donut Clicky Game!</h1>
+        <p>{props.message}</p>
+        <p>Current Score: {props.score}</p>
+        <p>Top Score: {props.topScore}</p>
+    </div>
+);
+         
 export default Header;
